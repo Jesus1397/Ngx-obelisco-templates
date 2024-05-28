@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { DropdownNavigationItem } from '@gcba/ngx-obelisco/core/models';
+import { DropdownNavigationItem } from 'ngx-obelisco-example/core/models';
 
 @Component({
   selector: 'app-doc',

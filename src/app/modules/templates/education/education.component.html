@@ -1,7 +1,9 @@
 <article>
   <page-header
     [title]="'Educación'"
-    [description]="'Nos ocupamos de crear, promover y ejecutar políticas educativas en sus niveles inicial, primario, secundario y superior, que conformen un sistema educativo innovador, único e integrado.'"
+    [description]="
+      'Nos ocupamos de crear, promover y ejecutar políticas educativas en sus niveles inicial, primario, secundario y superior, que conformen un sistema educativo innovador, único e integrado.'
+    "
   >
     <div class="mb-2 mb-md-3 mr-3">
       <o-dropdown-navigation
@@ -137,7 +139,7 @@
   <div class="container pt-4 mt-2">
     <h2 class="mb-4">Noticias</h2>
     <div class="card-deck max-cards-3 card-column">
-      <o-card
+      <!-- <o-card
         *ngFor="let sectionFiveItem of sectionFive"
         [title]="sectionFiveItem.title"
         [description]="sectionFiveItem.description"
@@ -150,7 +152,7 @@
         [isBordered]="true"
       >
         <small #info>Fecha de publicación: {{ sectionFiveItem.date }}</small>
-      </o-card>
+      </o-card> -->
     </div>
     <div class="mt-4 pt-2 mb-5">
       <a class="access" href="#" target="_blank" rel="noreferrer">
@@ -186,7 +188,6 @@
     title: 'Soledad Acuña',
     description: 'Ministro de Educación',
     image: {
-      alt: 'Soledad Acuña',
       src: 'https://gcba.github.io/obelisco-demo/assets/panel/soledadAcuna.png'
     }
   }"

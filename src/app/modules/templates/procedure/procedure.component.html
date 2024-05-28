@@ -2,7 +2,9 @@
   <!-- Encabezado de pagina - Inicio -->
   <page-header
     [title]="'Título del trámite'"
-    [description]="'Descripción del trámite que sintetice para qué la persona deberá realizarlo.'"
+    [description]="
+      'Descripción del trámite que sintetice para qué la persona deberá realizarlo.'
+    "
   >
     <div class="d-flex align-items-center">
       <span class="mr-1">Modalidad: </span>
@@ -139,12 +141,12 @@
         <!-- Colapsables -Inicio -->
         <section class="mb-5">
           <h2 class="mb-3">Título referido a colapsables</h2>
-          <o-collapse
+          <!-- <o-collapse
             id="accordion"
             [items]="collapseItems"
             dataParent="selectionUnique"
           >
-          </o-collapse>
+          </o-collapse> -->
         </section>
         <!-- Colapsables -Fin -->
 

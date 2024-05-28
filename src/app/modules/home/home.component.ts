@@ -10,6 +10,6 @@ export class HomeComponent {
   www.ngx-obelisco.com
 
   // Instalación con npm
-  npm install @gcba/ngx-obelisco
+  npm install ngx-obelisco-example
 `;
 }

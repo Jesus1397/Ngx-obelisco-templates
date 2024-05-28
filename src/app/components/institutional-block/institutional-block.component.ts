@@ -7,16 +7,19 @@ import {
   SocialMediaInstitutionalData,
 } from '../models/institutional-block.models';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
-import { OMapModule } from '@gcba/ngx-obelisco/map';
-import { OButtonComponent } from '@gcba/ngx-obelisco/button';
-import { OAccessModule } from '@gcba/ngx-obelisco/access';
-import { getSocialMediaIcon, formatTitleNetwork } from 'src/app/constants/functions.constants';
+import { OMapModule } from 'ngx-obelisco-example/map';
+import { OButtonModule } from 'ngx-obelisco-example/button';
+import { OAccessModule } from 'ngx-obelisco-example/access';
+import {
+  getSocialMediaIcon,
+  formatTitleNetwork,
+} from 'src/app/constants/functions.constants';
 @Component({
   selector: 'institutional-block',
   templateUrl: './institutional-block.component.html',
   styleUrls: ['./institutional-block.component.scss'],
   standalone: true,
-  imports: [CommonModule, OMapModule, OButtonComponent, OAccessModule],
+  imports: [CommonModule, OMapModule, OButtonModule, OAccessModule],
 })
 export class InstitutionalBlockComponent implements OnInit {
   @Input() ceo?: CeoInstitutionalData;

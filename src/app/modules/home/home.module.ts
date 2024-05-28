@@ -4,8 +4,9 @@ import { CommonModule } from '@angular/common';
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import { HighlightModule } from 'ngx-highlightjs';
-import { ONavbarModule } from '@gcba/ngx-obelisco/navbar';
-import { OCardModule } from '@gcba/ngx-obelisco/card';
+import { ONavbarModule } from 'ngx-obelisco-example/navbar';
+import { OCardModule } from 'ngx-obelisco-example/card';
+import { OAccessModule } from 'ngx-obelisco-example/access';
 
 @NgModule({
   declarations: [HomeComponent],
@@ -15,6 +16,7 @@ import { OCardModule } from '@gcba/ngx-obelisco/card';
     HighlightModule,
     ONavbarModule,
     OCardModule,
+    OAccessModule,
   ],
 })
 export class HomeModule {}

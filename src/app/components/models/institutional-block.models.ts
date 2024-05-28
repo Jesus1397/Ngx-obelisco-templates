@@ -1,4 +1,4 @@
-import { Media } from '@gcba/ngx-obelisco/core/models';
+import { Media } from 'ngx-obelisco-example/core/models';
 
 export interface CeoInstitutionalData {
   title?: string;

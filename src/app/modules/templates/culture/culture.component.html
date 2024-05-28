@@ -2,7 +2,9 @@
   <!-- Encabezado de pagina - Inicio -->
   <page-header
     [title]="'Cultura'"
-    [description]="'Conocé y participá de los programas, espacios y actividades que impulsan y desarrollan la cultura que la Ciudad tiene para vos.'"
+    [description]="
+      'Conocé y participá de los programas, espacios y actividades que impulsan y desarrollan la cultura que la Ciudad tiene para vos.'
+    "
   >
     <div class="mb-2 mb-md-3 mr-3">
       <o-dropdown-navigation
@@ -105,7 +107,7 @@
   <section class="container pt-4 mt-2">
     <h2 class="mb-4">Noticias</h2>
     <div class="card-deck max-cards-3 card-column">
-      <o-card
+      <!-- <o-card
         *ngFor="let newsItem of news"
         [title]="newsItem.title"
         [description]="newsItem.description"
@@ -115,7 +117,7 @@
         [isBordered]="true"
       >
         <small>{{ newsItem.publicationDate }}</small>
-      </o-card>
+      </o-card> -->
     </div>
     <div class="mt-4 pt-2 mb-5">
       <a class="access" href="#" target="_blank" rel="noreferrer">
@@ -131,7 +133,6 @@
       title: 'Enrique Avogadro',
       description: 'Ministro de Cultura',
       image: {
-        alt: 'Enrique Avogadro',
         src: '../../../../assets/templates/cultura/enriqueAvogadro.png'
       }
     }"
