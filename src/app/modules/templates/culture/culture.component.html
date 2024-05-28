@@ -107,17 +107,17 @@
   <section class="container pt-4 mt-2">
     <h2 class="mb-4">Noticias</h2>
     <div class="card-deck max-cards-3 card-column">
-      <!-- <o-card
+      <o-card
         *ngFor="let newsItem of news"
         [title]="newsItem.title"
         [description]="newsItem.description"
         route="/"
         [image]="newsItem.image"
-        [tags]="newsItem.tags"
+        [cardBadges]="[{ content: newsItem.tags[0].name }]"
         [isBordered]="true"
       >
         <small>{{ newsItem.publicationDate }}</small>
-      </o-card> -->
+      </o-card>
     </div>
     <div class="mt-4 pt-2 mb-5">
       <a class="access" href="#" target="_blank" rel="noreferrer">

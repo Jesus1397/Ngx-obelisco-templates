@@ -141,12 +141,13 @@
         <!-- Colapsables -Inicio -->
         <section class="mb-5">
           <h2 class="mb-3">Título referido a colapsables</h2>
-          <!-- <o-collapse
-            id="accordion"
-            [items]="collapseItems"
-            dataParent="selectionUnique"
+          <o-collapse
+            *ngFor="let item of collapseItems; let i = index"
+            [identifier]="'collapse' + i"
+            [title]="item.title"
+            [content]="item.content"
           >
-          </o-collapse> -->
+          </o-collapse>
         </section>
         <!-- Colapsables -Fin -->
 
