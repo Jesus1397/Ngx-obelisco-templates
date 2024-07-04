@@ -1,14 +1,17 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ONavbarModule } from '@gcba/ngx-obelisco/navbar';
-import { OFooterComponent } from '@gcba/ngx-obelisco/footer';
-import { OListModule } from '@gcba/ngx-obelisco/list';
-import { OCollapseComponent } from '@gcba/ngx-obelisco/collapse';
-import { OBlockModule } from '@gcba/ngx-obelisco/block';
-import { OButtonComponent } from '@gcba/ngx-obelisco/button';
-import { Collapse, Step } from '@gcba/ngx-obelisco/core/models';
+import { ONavbarModule } from 'ngx-obelisco-example/navbar';
+import { OFooterComponent, OFooterModule } from 'ngx-obelisco-example/footer';
+import { OListModule } from 'ngx-obelisco-example/list';
+import {
+  OCollapseComponent,
+  OCollapseModule,
+} from 'ngx-obelisco-example/collapse';
+import { OBlockModule } from 'ngx-obelisco-example/block';
+import { OButtonComponent, OButtonModule } from 'ngx-obelisco-example/button';
+import { Collapse, Step } from 'ngx-obelisco-example/core/models';
 import { PageHeaderComponent } from 'src/app/components/page-header/page-header.component';
-import { BreadcrumbService } from '@gcba/ngx-obelisco/core/services';
+import { BreadcrumbService } from 'ngx-obelisco-example/core/services';
 
 @Component({
   selector: 'app-procedure',
@@ -17,13 +20,13 @@ import { BreadcrumbService } from '@gcba/ngx-obelisco/core/services';
   standalone: true,
   imports: [
     CommonModule,
-    OFooterComponent,
+    OFooterModule,
     ONavbarModule,
     PageHeaderComponent,
     OListModule,
-    OCollapseComponent,
+    OCollapseModule,
     OBlockModule,
-    OButtonComponent,
+    OButtonModule,
   ],
 })
 export class ProcedureComponent {

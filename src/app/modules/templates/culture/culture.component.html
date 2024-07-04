@@ -2,7 +2,9 @@
   <!-- Encabezado de pagina - Inicio -->
   <page-header
     [title]="'Cultura'"
-    [description]="'Conocé y participá de los programas, espacios y actividades que impulsan y desarrollan la cultura que la Ciudad tiene para vos.'"
+    [description]="
+      'Conocé y participá de los programas, espacios y actividades que impulsan y desarrollan la cultura que la Ciudad tiene para vos.'
+    "
   >
     <div class="mb-2 mb-md-3 mr-3">
       <o-dropdown-navigation
@@ -111,7 +113,7 @@
         [description]="newsItem.description"
         route="/"
         [image]="newsItem.image"
-        [tags]="newsItem.tags"
+        [cardBadges]="[{ text: newsItem.tags[0].name }]"
         [isBordered]="true"
       >
         <small>{{ newsItem.publicationDate }}</small>
@@ -131,7 +133,6 @@
       title: 'Enrique Avogadro',
       description: 'Ministro de Cultura',
       image: {
-        alt: 'Enrique Avogadro',
         src: '../../../../assets/templates/cultura/enriqueAvogadro.png'
       }
     }"
