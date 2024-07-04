@@ -31,6 +31,7 @@
       ></o-dropdown-navigation>
     </div>
   </page-header>
+
   <!-- inicio: tarjetas / atajos -->
   <div class="container px-0">
     <div class="card-deck max-cards-4 card-column mb-5">
@@ -44,6 +45,7 @@
     </div>
   </div>
   <!-- fin: tarjetas / atajos -->
+
   <!-- inicio: panel -->
   <div class="container px-0 py-5">
     <o-highlighted
@@ -60,107 +62,43 @@
     </o-highlighted>
   </div>
   <!-- fin: panel -->
-  <!-- inicio: tarjetas / "Conocé nuestros programas" -->
-  <div class="container pt-2 mb-5">
-    <h2 class="my-4">Conocé nuestros programas</h2>
-    <div class="card-deck max-cards-3 card-column">
-      <o-card
-        *ngFor="let sectionOneItem of sectionOne"
-        [title]="sectionOneItem.title"
-        [description]="sectionOneItem.description"
-        route="/"
-        [isBordered]="true"
-        [image]="{
-          src: sectionOneItem.image,
-          alt: 'descripción de imagen'
-        }"
-      ></o-card>
+
+  <!-- inicio: secciones repetitivas -->
+  <ng-container *ngFor="let section of sections">
+    <div class="container pt-2 mb-5">
+      <h2 class="my-4">{{ section.title }}</h2>
+      <div class="card-deck max-cards-3 card-column">
+        <o-card
+          *ngFor="let item of section.items"
+          [title]="item.title"
+          [description]="item.description"
+          route="/"
+          [image]="{
+            src: item.image,
+            alt: 'descripción de imagen'
+          }"
+          [isHorizontal]="section.isHorizontal"
+          [isBordered]="true"
+        >
+          <small #info *ngIf="item.date"
+            >Fecha de publicación: {{ item.date }}</small
+          >
+        </o-card>
+      </div>
+      <div *ngIf="section.link" class="mt-4 pt-2 mb-5">
+        <a
+          class="access"
+          href="{{ section.link }}"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Ver todas las noticias
+        </a>
+      </div>
     </div>
-  </div>
-  <!-- fin: tarjetas / "Conocé nuestros programas" -->
-  <!-- inicio: tarjetas / "Lo más consultado" -->
-  <div class="container mb-4 pb-2 pt-2">
-    <h2 class="pt-4 mb-4">Lo más consultado</h2>
-    <div class="card-deck max-cards-3 card-column">
-      <o-card
-        *ngFor="let sectionTwoItem of sectionTwo"
-        [title]="sectionTwoItem.title"
-        [description]="sectionTwoItem.description"
-        route="/"
-        [image]="{
-          src: sectionTwoItem.image,
-          alt: 'descripción de imagen'
-        }"
-        [isHorizontal]="true"
-        [isBordered]="true"
-      ></o-card>
-    </div>
-  </div>
-  <!-- fin: tarjetas / "Lo más consultado" -->
-  <!-- inicio: tarjetas / "Destacadas" -->
-  <div class="container mb-4 pb-2 pt-2">
-    <h2 class="pt-4 mb-4">Destacadas</h2>
-    <div class="card-deck max-cards-3 card-column">
-      <o-card
-        *ngFor="let sectionThreeItem of sectionThree"
-        [title]="sectionThreeItem.title"
-        [description]="sectionThreeItem.description"
-        route="/"
-        [image]="{
-          src: sectionThreeItem.image,
-          alt: 'descripción de imagen'
-        }"
-        [isHorizontal]="true"
-        [isBordered]="true"
-      ></o-card>
-    </div>
-  </div>
-  <!-- fin: tarjetas / "Destacadas" -->
-  <!-- inicio: tarjetas / "Conocé más" -->
-  <div class="container mb-4 pb-2 pt-2">
-    <h2 class="pt-4 mb-4">Conocé más</h2>
-    <div class="card-deck max-cards-3 card-column">
-      <o-card
-        *ngFor="let sectionFourItem of sectionFour"
-        [title]="sectionFourItem.title"
-        [description]="sectionFourItem.description"
-        route="/"
-        [image]="{
-          src: sectionFourItem.image,
-          alt: 'descripción de imagen'
-        }"
-        [isHorizontal]="true"
-        [isBordered]="true"
-      ></o-card>
-    </div>
-  </div>
-  <!-- fin: tarjetas / "Conocé más" -->
-  <!-- inicio: noticias -->
-  <div class="container pt-4 mt-2">
-    <h2 class="mb-4">Noticias</h2>
-    <div class="card-deck max-cards-3 card-column">
-      <o-card
-        *ngFor="let sectionFiveItem of sectionFive"
-        [title]="sectionFiveItem.title"
-        [description]="sectionFiveItem.description"
-        route="/"
-        [image]="{
-          src: sectionFiveItem.image,
-          alt: 'descripción de imagen'
-        }"
-        [cardBadges]="[{ text: sectionFiveItem.badge }]"
-        [isBordered]="true"
-      >
-        <small #info>Fecha de publicación: {{ sectionFiveItem.date }}</small>
-      </o-card>
-    </div>
-    <div class="mt-4 pt-2 mb-5">
-      <a class="access" href="#" target="_blank" rel="noreferrer">
-        Ver todas las noticias
-      </a>
-    </div>
-  </div>
-  <!-- fin: noticias -->
+  </ng-container>
+  <!-- fin: secciones repetitivas -->
+
   <!-- inicio: "Mapa de acceso al Ministerio de Educación" -->
   <div class="container mb-5 pt-2">
     <h2 class="pt-4 mb-2">Mapa de acceso al Ministerio de Educación</h2>

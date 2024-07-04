@@ -17,6 +17,14 @@ import { PageHeaderComponent } from 'src/app/components/page-header/page-header.
 import { InstitutionalBlockComponent } from 'src/app/components/institutional-block/institutional-block.component';
 import { MapInstitutionalData } from 'src/app/components/models/institutional-block.models';
 
+interface SectionItem {
+  title: string;
+  description: string;
+  image: string;
+  date?: string;
+  badge?: string;
+}
+
 @Component({
   selector: 'app-education',
   standalone: true,
@@ -70,7 +78,7 @@ export class EducationComponent {
     },
   ];
 
-  public sectionOne = [
+  public sectionOne: SectionItem[] = [
     {
       title: 'Hablemos de educación: La escuela primaria que queremos',
       description:
@@ -121,7 +129,7 @@ export class EducationComponent {
     },
   ];
 
-  public sectionTwo = [
+  public sectionTwo: SectionItem[] = [
     {
       title: 'Aprendé Programando',
       description:
@@ -164,7 +172,7 @@ export class EducationComponent {
     },
   ];
 
-  public sectionThree = [
+  public sectionThree: SectionItem[] = [
     {
       title: '54 Nuevas Escuelas',
       description: 'Mirá el Plan del Compromiso de Gobierno.',
@@ -207,7 +215,7 @@ export class EducationComponent {
     },
   ];
 
-  public sectionFour = [
+  public sectionFour: SectionItem[] = [
     {
       title: 'Ciudadanía Global',
       description:
@@ -252,7 +260,7 @@ export class EducationComponent {
     },
   ];
 
-  public sectionFive = [
+  public sectionFive: SectionItem[] = [
     {
       title: 'Inscripciones para las Tecnicaturas Superiores',
       description:
@@ -357,4 +365,33 @@ export class EducationComponent {
     srcButton:
       'https://mapa.buenosaires.gob.ar/informacion/?lat=-34.581573&lng=-58.380459&zl=15&modo=transporte&dir=Ministerio+de+Educaci%C3%B3n+GCBA+(CABA%2C+CABA)&ilat=-34.581573&ilng=-58.380459&fid=sitios_de_interes%7C2533',
   };
+
+  sections = [
+    {
+      title: 'Conocé nuestros programas',
+      items: this.sectionOne,
+      isHorizontal: false,
+    },
+    {
+      title: 'Lo más consultado',
+      items: this.sectionTwo,
+      isHorizontal: true,
+    },
+    {
+      title: 'Destacadas',
+      items: this.sectionThree,
+      isHorizontal: true,
+    },
+    {
+      title: 'Conocé más',
+      items: this.sectionFour,
+      isHorizontal: true,
+    },
+    {
+      title: 'Noticias',
+      items: this.sectionFive,
+      isHorizontal: false,
+      link: '#',
+    },
+  ];
 }
