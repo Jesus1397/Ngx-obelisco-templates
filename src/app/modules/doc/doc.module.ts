@@ -8,6 +8,7 @@ import { ODropdownModule } from 'ngx-obelisco-example/dropdown';
 import { ONavModule } from 'ngx-obelisco-example/nav';
 import { PageHeaderComponent } from 'src/app/components/page-header/page-header.component';
 import { InstitutionalBlockComponent } from 'src/app/components/institutional-block/institutional-block.component';
+import { HighlightJsModule } from 'ngx-highlight-js';
 
 @NgModule({
   declarations: [DocComponent],
@@ -19,6 +20,7 @@ import { InstitutionalBlockComponent } from 'src/app/components/institutional-bl
     ONavModule,
     PageHeaderComponent,
     InstitutionalBlockComponent,
+    HighlightJsModule,
   ],
 })
 export class DocModule {}

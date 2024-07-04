@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
-import { HighlightModule } from 'ngx-highlightjs';
 import { ONavbarModule } from 'ngx-obelisco-example/navbar';
 import { OCardModule } from 'ngx-obelisco-example/card';
 import { OAccessModule } from 'ngx-obelisco-example/access';
@@ -13,7 +12,6 @@ import { OAccessModule } from 'ngx-obelisco-example/access';
   imports: [
     CommonModule,
     HomeRoutingModule,
-    HighlightModule,
     ONavbarModule,
     OCardModule,
     OAccessModule,
