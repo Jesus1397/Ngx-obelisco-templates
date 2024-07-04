@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ONavbarModule } from '@gcba/ngx-obelisco/navbar';
-import { OFooterComponent } from '@gcba/ngx-obelisco/footer';
-import { OCardModule } from '@gcba/ngx-obelisco/card';
-import { OHighlightedModule } from '@gcba/ngx-obelisco/highlighted';
-import { OButtonComponent } from '@gcba/ngx-obelisco/button';
-import { ODropdownModule } from '@gcba/ngx-obelisco/dropdown';
-import { ONavModule } from '@gcba/ngx-obelisco/nav';
-import { DropdownNavigationItem } from '@gcba/ngx-obelisco/core/models';
+import { ONavbarModule } from 'ngx-obelisco-example/navbar';
+import { OFooterComponent, OFooterModule } from 'ngx-obelisco-example/footer';
+import { OCardModule } from 'ngx-obelisco-example/card';
+import { OHighlightedModule } from 'ngx-obelisco-example/highlighted';
+import { OButtonComponent, OButtonModule } from 'ngx-obelisco-example/button';
+import { ODropdownModule } from 'ngx-obelisco-example/dropdown';
+import { ONavModule } from 'ngx-obelisco-example/nav';
+import { DropdownNavigationItem } from 'ngx-obelisco-example/core/models';
 import { PageHeaderComponent } from 'src/app/components/page-header/page-header.component';
 import { InstitutionalBlockComponent } from 'src/app/components/institutional-block/institutional-block.component';
 import { MapInstitutionalData } from 'src/app/components/models/institutional-block.models';
@@ -25,10 +25,10 @@ export enum TagTypes {
   imports: [
     CommonModule,
     ONavbarModule,
-    OFooterComponent,
+    OFooterModule,
     OCardModule,
     OHighlightedModule,
-    OButtonComponent,
+    OButtonModule,
     PageHeaderComponent,
     ODropdownModule,
     ONavModule,
