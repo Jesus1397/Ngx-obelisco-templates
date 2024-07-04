@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { EducationComponent } from './modules/templates/education/education.component';
 import { CultureComponent } from './modules/templates/culture/culture.component';
 import { ProcedureComponent } from './modules/templates/procedure/procedure.component';
+import { GovermentAreasOptionOneComponent } from './modules/templates/goverment-areas-option-one/goverment-areas-option-one.component';
+import { GovermentAreasOptionTwoComponent } from './modules/templates/goverment-areas-option-two/goverment-areas-option-two.component';
 
 const routes: Routes = [
   {
@@ -33,6 +35,14 @@ const routes: Routes = [
   {
     path: 'templates/procedure',
     component: ProcedureComponent,
+  },
+  {
+    path: 'templates/goverment-areas-option-one',
+    component: GovermentAreasOptionOneComponent,
+  },
+  {
+    path: 'templates/goverment-areas-option-two',
+    component: GovermentAreasOptionTwoComponent,
   },
   { path: '**', pathMatch: 'full', redirectTo: '' },
 ];

@@ -1,0 +1,265 @@
+<article>
+  <page-header
+    [title]="'Nivel II'"
+    [description]="
+      'Bajada de Texto. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc aliquam sodales velit, id ornare elit aliquet at. Sed enim purus, posuere ac nisl vel, pellentesque consequat est.'
+    "
+  >
+    <div class="d-flex mb-2 mb-md-3 mr-3">
+      <div class="mr-3">
+        <o-dropdown-navigation
+          dataTarget="education-institutional-dropdown"
+          [dropNavItems]="dropdownItemsOne"
+          iconRight="expand_more"
+          title="Institucional"
+          [isAnimatedIconRight]="true"
+        ></o-dropdown-navigation>
+      </div>
+      <div>
+        <o-dropdown-navigation
+          dataTarget="education-institutional-dropdown"
+          [dropNavItems]="dropdownItemsTwo"
+          iconRight="expand_more"
+          title="Transparencia activa"
+          [isAnimatedIconRight]="true"
+        ></o-dropdown-navigation>
+      </div>
+    </div>
+  </page-header>
+
+  <!--Inicio de Seccion de Atajos-->
+  <div class="container pb-4 pb-md-5">
+    <h2 class="mb-3 mb-md-4">Destacados</h2>
+    <div class="card-deck max-cards-3 card-column mt-1">
+      <o-card
+        title="Título del acceso"
+        description="Descripción del acceso"
+        route="/components"
+        icon="assignment"
+        [isHorizontal]="true"
+        [isBordered]="true"
+      ></o-card>
+      <o-card
+        title="Título del acceso"
+        description="Descripción del acceso"
+        route="/components"
+        icon="assignment"
+        [isHorizontal]="true"
+        [isBordered]="true"
+      ></o-card>
+      <o-card
+        title="Título del acceso"
+        description="Descripción del acceso"
+        route="/components"
+        icon="assignment"
+        [isHorizontal]="true"
+        [isBordered]="true"
+      ></o-card>
+    </div>
+  </div>
+  <!--Fin de Seccion de Atajos-->
+
+  <!--Inicio de Seccion de Tarjetas-->
+  <div class="container py-4 py-md-5">
+    <h2 class="mb-3 mb-md-4">Tarjetas con imágenes para programas</h2>
+
+    <div class="card-deck max-cards-3 card-column mt-1">
+      <o-card
+        title="Descripción del acceso"
+        description="Lorem ipsum dolor sit amet consectetur."
+        route="/components"
+        [image]="{
+          src: 'https://gcba.github.io/obelisco-demo/assets/panel/educacion-panel.png',
+          alt: 'descripción de imagen'
+        }"
+        [isHorizontal]="true"
+        [isBordered]="true"
+      ></o-card>
+
+      <o-card
+        title="Descripción del acceso"
+        description="Lorem ipsum dolor sit amet consectetur."
+        route="/components"
+        [image]="{
+          src: 'https://gcba.github.io/obelisco-demo/assets/panel/educacion-panel.png',
+          alt: 'descripción de imagen'
+        }"
+        [isHorizontal]="true"
+        [isBordered]="true"
+      ></o-card>
+
+      <o-card
+        title="Descripción del acceso"
+        description="Lorem ipsum dolor sit amet consectetur."
+        route="/components"
+        [image]="{
+          src: 'https://gcba.github.io/obelisco-demo/assets/panel/educacion-panel.png',
+          alt: 'descripción de imagen'
+        }"
+        [isHorizontal]="true"
+        [isBordered]="true"
+      ></o-card>
+
+      <o-card
+        title="Descripción del acceso"
+        description="Lorem ipsum dolor sit amet consectetur."
+        route="/components"
+        [image]="{
+          src: 'https://gcba.github.io/obelisco-demo/assets/panel/educacion-panel.png',
+          alt: 'descripción de imagen'
+        }"
+        [isHorizontal]="true"
+        [isBordered]="true"
+      ></o-card>
+
+      <o-card
+        title="Descripción del acceso"
+        description="Lorem ipsum dolor sit amet consectetur."
+        route="/components"
+        [image]="{
+          src: 'https://gcba.github.io/obelisco-demo/assets/panel/educacion-panel.png',
+          alt: 'descripción de imagen'
+        }"
+        [isHorizontal]="true"
+        [isBordered]="true"
+      ></o-card>
+
+      <o-card
+        title="Descripción del acceso"
+        description="Lorem ipsum dolor sit amet consectetur."
+        route="/components"
+        [image]="{
+          src: 'https://gcba.github.io/obelisco-demo/assets/panel/educacion-panel.png',
+          alt: 'descripción de imagen'
+        }"
+        [isHorizontal]="true"
+        [isBordered]="true"
+      ></o-card>
+    </div>
+  </div>
+  <!--Fin de Seccion de Tarjetas-->
+
+  <!--Inicio de Seccion de Accesos-->
+  <div class="container py-4 py-md-5">
+    <h2 class="mb-3 mb-md-4">Servicios</h2>
+
+    <div class="access-deck max-cards-3 access-column mb-5">
+      <o-access title="Testea tu local comercial" route="/home"></o-access>
+      <o-access title="Turnos Web" route="/home"></o-access>
+      <o-access title="Habilitaciones " route="/home"></o-access>
+      <o-access title="Buscador de Inspectores " route="/home"></o-access>
+      <o-access title="Información Etapa Habilitadora" route="/home"></o-access>
+      <o-access
+        title="Subsanación de Faltas documentales"
+        route="/home"
+      ></o-access>
+    </div>
+  </div>
+  <!--Fin de Seccion de Accesos-->
+
+  <!--Inicio de Seccion de Destacado-->
+  <div class="container mt-2 mt-md-0 py-2 mb-5">
+    <div class="card-deck max-cards-2">
+      <o-highlighted
+        type="grouping"
+        [title]="titleH"
+        [description]="description"
+        [image]="picture"
+      >
+        <o-button #child link="#" size="lg"></o-button>
+        <o-button #child size="lg" type="secondary" link="#"></o-button>
+      </o-highlighted>
+
+      <o-highlighted
+        type="grouping"
+        [title]="titleHtwo"
+        [description]="description"
+        [image]="picture"
+      >
+        <o-button #child link="#" size="lg"></o-button>
+        <o-button #child size="lg" type="secondary" link="#"></o-button>
+      </o-highlighted>
+    </div>
+  </div>
+  <!--Fin de Seccion de Destacado-->
+
+  <!--Inicio de Seccion de Tarjetas de noticias-->
+  <div class="container py-4 pt-md-4 pb-md-5 mt-md-2">
+    <h2 class="mb-3 mb-md-4">Noticias</h2>
+
+    <div class="card-deck max-cards-3 card-column mt-1 mb-4">
+      <o-card
+        title="Título de la tarjeta"
+        description="Descripción de la tarjeta"
+        route="/components"
+        [image]="{
+          src: 'https://gcba.github.io/obelisco-demo/assets/tarjetas/noticia-1.png',
+          alt: 'descripción de imagen'
+        }"
+        [cardBadges]="[{ text: 'etiqueta 1' }, { text: 'etiqueta 2' }]"
+        [isBordered]="true"
+      >
+        <small #info>Fecha de publicación</small>
+      </o-card>
+
+      <o-card
+        title="Título de la tarjeta"
+        description="Descripción de la tarjeta"
+        route="/components"
+        [image]="{
+          src: 'https://gcba.github.io/obelisco-demo/assets/tarjetas/noticia-2.png',
+          alt: 'descripción de imagen'
+        }"
+        [cardBadges]="[{ text: 'etiqueta 1' }, { text: 'etiqueta 2' }]"
+        [isBordered]="true"
+      >
+        <small #info>Fecha de publicación</small>
+      </o-card>
+
+      <o-card
+        title="Título de la tarjeta"
+        description="Descripción de la tarjeta"
+        route="/components"
+        [image]="{
+          src: 'https://gcba.github.io/obelisco-demo/assets/tarjetas/noticia-3.png',
+          alt: 'descripción de imagen'
+        }"
+        [cardBadges]="[{ text: 'etiqueta 1' }, { text: 'etiqueta 2' }]"
+        [isBordered]="true"
+      >
+        <small #info>Fecha de publicación</small>
+      </o-card>
+    </div>
+
+    <div class="pt-1">
+      <a class="access" href="#" target="_blank" rel="noreferrer">
+        Ver todas las noticias
+      </a>
+    </div>
+  </div>
+  <!--Fin de Seccion de Tarjetas de noticias-->
+
+  <!--Inicio de Seccion de Sección institucional-->
+  <institutional-block
+    [ceo]="{
+      title: 'Nombre de Funcionario',
+      description: 'Secretaria Nivel II',
+      image: {
+        src: 'https://gcba.github.io/obelisco-demo/assets/panel/soledadAcuna.png'
+      }
+    }"
+    [contact]="{
+      phone: '5030 9100',
+      email: 'nivelII@buenosaires.gob.ar'
+    }"
+    [socialMedia]="[
+      { title: 'Facebook', src: '#' },
+      { title: 'Instagram', src: '#' },
+      { title: 'Twitter', src: '#' }
+    ]"
+    [isSocialMediaHorizontal]="true"
+  >
+  </institutional-block>
+  <!--Fin de Seccion de Sección institucional-->
+</article>
+<o-footer></o-footer>
