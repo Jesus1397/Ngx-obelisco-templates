@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { OFooterComponent } from '@gcba/ngx-obelisco/footer';
-import { BreadcrumbService } from '@gcba/ngx-obelisco/core/services';
-import { OGalleryComponent } from '@gcba/ngx-obelisco/gallery';
-import { OCardModule } from '@gcba/ngx-obelisco/card';
-import { MediaGallery } from '@gcba/ngx-obelisco/core/models';
+import { OFooterModule } from 'ngx-obelisco-example/footer';
+import { BreadcrumbService } from 'ngx-obelisco-example/core/services';
+import { OGalleryModule } from 'ngx-obelisco-example/gallery';
+import { OCardModule } from 'ngx-obelisco-example/card';
+import { MediaGallery } from 'ngx-obelisco-example/core/models';
 import { PageHeaderComponent } from 'src/app/components/page-header/page-header.component';
 
 @Component({
@@ -14,9 +14,9 @@ import { PageHeaderComponent } from 'src/app/components/page-header/page-header.
   standalone: true,
   imports: [
     CommonModule,
-    OFooterComponent,
+    OFooterModule,
     PageHeaderComponent,
-    OGalleryComponent,
+    OGalleryModule,
     OCardModule,
   ],
 })
