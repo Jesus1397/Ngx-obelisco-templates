@@ -7,6 +7,7 @@ import { GovermentAreasOptionOneComponent } from './modules/templates/goverment-
 import { GovermentAreasOptionTwoComponent } from './modules/templates/goverment-areas-option-two/goverment-areas-option-two.component';
 import { NewsGalleryComponent } from './modules/templates/news-gallery/news-gallery.component';
 import { NewsVideoComponent } from './modules/templates/news-video/news-video.component';
+import { BookComponent } from './modules/templates/book/book.component';
 
 const routes: Routes = [
   {
@@ -53,6 +54,10 @@ const routes: Routes = [
   {
     path: 'templates/news-video',
     component: NewsVideoComponent,
+  },
+  {
+    path: 'templates/book',
+    component: BookComponent,
   },
   { path: '**', pathMatch: 'full', redirectTo: '' },
 ];
