@@ -8,6 +8,7 @@ import { GovermentAreasOptionTwoComponent } from './modules/templates/goverment-
 import { NewsGalleryComponent } from './modules/templates/news-gallery/news-gallery.component';
 import { NewsVideoComponent } from './modules/templates/news-video/news-video.component';
 import { BookComponent } from './modules/templates/book/book.component';
+import { SimpleComponent } from './modules/templates/simple/simple.component';
 
 const routes: Routes = [
   {
@@ -58,6 +59,10 @@ const routes: Routes = [
   {
     path: 'templates/book',
     component: BookComponent,
+  },
+  {
+    path: 'templates/simple',
+    component: SimpleComponent,
   },
   { path: '**', pathMatch: 'full', redirectTo: '' },
 ];
