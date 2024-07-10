@@ -9,6 +9,7 @@ import { NewsGalleryComponent } from './modules/templates/news-gallery/news-gall
 import { NewsVideoComponent } from './modules/templates/news-video/news-video.component';
 import { BookComponent } from './modules/templates/book/book.component';
 import { SimpleComponent } from './modules/templates/simple/simple.component';
+import { BillsSummaryComponent } from './modules/templates/bills-summary/bills-summary.component';
 
 const routes: Routes = [
   {
@@ -63,6 +64,10 @@ const routes: Routes = [
   {
     path: 'templates/simple',
     component: SimpleComponent,
+  },
+  {
+    path: 'templates/bills-summary',
+    component: BillsSummaryComponent,
   },
   { path: '**', pathMatch: 'full', redirectTo: '' },
 ];

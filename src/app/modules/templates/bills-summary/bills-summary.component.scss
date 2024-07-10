@@ -1,0 +1,55 @@
+.main-box {
+  border-radius: 0.5rem;
+  border: 2px solid #e6ebf0;
+  background-color: white;
+
+  &__header {
+    padding: 0.75rem 1.5rem;
+    border-bottom: 2px solid #e6ebf0;
+  }
+  &__content {
+    padding: 1rem 1.5rem;
+  }
+}
+::ng-deep .accordion > .card.pagos {
+  box-shadow: none;
+
+  .btn-details {
+    display: flex;
+    gap: 0.25rem;
+    color: #007bc7;
+    font-weight: 400;
+    padding: 0.25rem 0;
+    &__icon {
+      font-size: 1.5rem;
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+
+    &[aria-expanded="true"] {
+      .btn-details__icon {
+        transform: rotate(-180deg);
+        transition: transform 0.2s ease-in-out;
+      }
+    }
+    &[aria-expanded="false"] {
+      .btn-details__icon {
+        transform: rotate(0deg);
+        transition: transform 0.2s ease-in-out;
+      }
+    }
+  }
+
+  .collape-content-box {
+    gap: 0.5rem;
+    @media (min-width: 976px) {
+      gap: 2rem;
+    }
+  }
+}
+.row-section {
+  padding-bottom: 56px;
+  @media (min-width: 976px) {
+    padding-bottom: 80px;
+  }
+}
