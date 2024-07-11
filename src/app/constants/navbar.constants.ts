@@ -32,4 +32,8 @@ export const TEMPLATES_ROUTES_SEARCHBARITEMS: SearchbarItem[] = [
     title: 'Trámites',
     route: 'templates/procedure',
   },
+  {
+    title: 'Noticias - Galería',
+    route: 'templates/news-gallery',
+  },
 ];

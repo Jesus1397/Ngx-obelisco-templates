@@ -1,0 +1,142 @@
+<o-navbar
+  [logo]="{
+    src: '../../../assets/logo-ba-gris.png',
+    route: '/'
+  }"
+  [routesAccount]="routesAccount"
+></o-navbar>
+<main>
+  <div class="bg-light">
+    <div class="container">
+      <section class="pt-5 pb-3 d-flex">
+        <span class="material-icons-round"> chevron_left </span>
+        <a href="/templates">Volver</a>
+      </section>
+      <h1 class="mb-4">Historial de pagos</h1>
+      <section class="row row-section">
+        <div class="col-12 col-lg-8">
+          <div class="main-box mb-3 mb-lg-0">
+            <div class="main-box__header">
+              <span class="material-icons-round"> history </span>
+              <p class="h3 mb-0">Historial de boletas pagas</p>
+            </div>
+            <div class="main-box__content">
+              <o-search
+                [searchbarItems]="searchRoutes"
+                placeholder="Buscá por número de boleta..."
+              ></o-search>
+              <section
+                class="d-flex flex-column flex-lg-row pt-4 pb-3 flex-wrap"
+                style="gap: 16px"
+              >
+                <o-dropdown-selection
+                  dataTarget="dropdownRadio1"
+                  title="Recaudador"
+                  iconRight="expand_more"
+                  [dropSelectItems]="dropdownItemsRadio"
+                  [isAnimatedIconRight]="true"
+                ></o-dropdown-selection>
+                <o-dropdown-selection
+                  dataTarget="dropdownRadio2"
+                  title="Canal de pago"
+                  iconRight="expand_more"
+                  [dropSelectItems]="dropdownItemsRadio"
+                  [isAnimatedIconRight]="true"
+                ></o-dropdown-selection>
+                <o-dropdown-selection
+                  dataTarget="dropdownRadio3"
+                  title="Por fecha"
+                  iconRight="expand_more"
+                  [dropSelectItems]="dropdownItemsRadio"
+                  [isAnimatedIconRight]="true"
+                ></o-dropdown-selection>
+                <o-button [isDisabled]="true">Limpiar filtros</o-button>
+              </section>
+
+              <section class="item">
+                <div class="d-flex flex-column" style="gap: 4px">
+                  <small>Boleta Nº 2564-59879543</small>
+                  <span class="h4 font-weight-bold mb-0"
+                    >$1200<sup>00</sup></span
+                  >
+                  <span class="h5 mb-1"
+                    >Subsecretaría de Trabajo, Industria y Comercio</span
+                  >
+                  <div class="d-flex align-items-center mb-1" style="gap: 4px">
+                    <span
+                      class="material-icons-round text-info"
+                      style="font-size: 1rem"
+                    >
+                      info
+                    </span>
+                    <small>Fecha de pago 13/02/2019</small>
+                  </div>
+                  <o-badge>Tarjeta de Débito o Crédito</o-badge>
+                </div>
+                <o-button [hasIcon]="true" size="sm" type="link"
+                  ><span class="material-icons-round"> remove_red_eye </span>Ver
+                  detalle</o-button
+                >
+              </section>
+              <hr class="m-o" />
+              <section class="item">
+                <div class="d-flex flex-column" style="gap: 4px">
+                  <small>Boleta Nº 2564-59879543</small>
+                  <span class="h4 font-weight-bold mb-0"
+                    >$1200<sup>00</sup></span
+                  >
+                  <span class="h5 mb-1"
+                    >Subsecretaría de Trabajo, Industria y Comercio</span
+                  >
+                  <div class="d-flex align-items-center mb-1" style="gap: 4px">
+                    <span
+                      class="material-icons-round text-info"
+                      style="font-size: 1rem"
+                    >
+                      info
+                    </span>
+                    <small>Fecha de pago 13/02/2019</small>
+                  </div>
+                  <o-badge>Billetera Virtual</o-badge>
+                </div>
+                <o-button [hasIcon]="true" size="sm" type="link"
+                  ><span class="material-icons-round"> remove_red_eye </span>Ver
+                  detalle</o-button
+                >
+              </section>
+              <hr class="m-o" />
+              <section class="item">
+                <div class="d-flex flex-column" style="gap: 4px">
+                  <small>Boleta Nº 2564-59879543</small>
+                  <span class="h4 font-weight-bold mb-0"
+                    >$1200<sup>00</sup></span
+                  >
+                  <span class="h5 mb-1">Registro Civil</span>
+                  <div class="d-flex align-items-center mb-1" style="gap: 4px">
+                    <span
+                      class="material-icons-round text-info"
+                      style="font-size: 1rem"
+                    >
+                      info
+                    </span>
+                    <small>Fecha de pago 13/02/2019</small>
+                  </div>
+                  <o-badge>Alta de VEP</o-badge>
+                </div>
+                <o-button [hasIcon]="true" size="sm" type="link"
+                  ><span class="material-icons-round"> remove_red_eye </span>Ver
+                  detalle</o-button
+                >
+              </section>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</main>
+<o-footer
+  [isPhoneSectionHidden]="true"
+  [isNetworkSectionHidden]="true"
+  [isLinkSectionHideen]="true"
+></o-footer>

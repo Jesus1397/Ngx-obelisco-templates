@@ -1,0 +1,137 @@
+<o-navbar
+  [logo]="{
+    src: '../../../assets/logo-ba-gris.png',
+    route: '/'
+  }"
+  [routesAccount]="routesAccount"
+></o-navbar>
+<main>
+  <div class="bg-light">
+    <div class="container">
+      <section class="pt-5 pb-3 d-flex">
+        <span class="material-icons-round"> chevron_left </span>
+        <a href="/templates">Volver</a>
+      </section>
+      <section class="row row-section">
+        <div class="col-12 col-lg-8">
+          <o-alert type="success" customClasses="mb-3">
+            <strong>Tu boleta fue generada con éxito.</strong> Para abonar la
+            boleta, seleccioná alguna de las formas de pago.
+          </o-alert>
+          <div class="main-box mb-3 mb-lg-0">
+            <div class="main-box__header">
+              <h1 class="h4 mb-0">Mi boleta</h1>
+            </div>
+            <div class="main-box__content">
+              <div class="d-flex flex-column" style="gap: 8px">
+                <small>BOLETA N° 24165-00008160</small>
+                <span class="text-success font-weight-bold"
+                  >$4.860<sup>00</sup></span
+                >
+                <span class="h5">Dirección General de Empleo</span>
+                <small>Válida hasta: 18/02/2024</small>
+              </div>
+
+              <o-collapse customClasses="pagos mt-3 mb-0" identifier="pagos">
+                <o-collapse-header>
+                  <div>
+                    <button
+                      class="btn btn-icon btn-details collapsed"
+                      data-toggle="collapse"
+                      data-target="#pagos"
+                      (click)="toggle()"
+                    >
+                      <small>{{
+                        textPaymentsToggle ? "Ocultar detalle" : "Ver detalle"
+                      }}</small>
+                      <span class="material-icons-round btn-details__icon">
+                        expand_less
+                      </span>
+                    </button>
+                  </div>
+                </o-collapse-header>
+                <o-collapse-content customClasses="p-0">
+                  <div class="py-4">
+                    <div
+                      class="d-flex flex-column-reverse flex-lg-row collape-content-box"
+                    >
+                      <div>
+                        <p class="small mb-2">
+                          Rúbrica manual, por folio utilizado (Incluye Libros de
+                          sueldos y jornales, Registro único de personal, Libro
+                          de viajantes de comercio, Libro de trabajo a
+                          domicilio, Libro de peluqueros; Libro de Órdenes para
+                          trabajadores de casas de renta).
+                        </p>
+                        <p class="mb-0 text-uppercase small">cantidad: 1</p>
+                      </div>
+                      <div>
+                        <span class="h5 font-weight-bold mb-0"
+                          >$220<sup>00</sup></span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <hr class="m-0" />
+                  <div class="py-4">
+                    <div
+                      class="d-flex flex-column-reverse flex-lg-row collape-content-box"
+                    >
+                      <div>
+                        <p class="small mb-2">
+                          Autorización de centralización de la rúbrica de libros
+                          laborales: Desde 6 domicilios y hasta 10.
+                        </p>
+                        <p class="mb-0 text-uppercase small">cantidad: 1</p>
+                      </div>
+                      <div>
+                        <span class="h5 font-weight-bold mb-0"
+                          >$4640<sup>00</sup></span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </o-collapse-content>
+              </o-collapse>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4">
+          <o-block>
+            <o-block-header>
+              <p class="mb-2">Tarifa Rúbrica Documentación Laboral</p>
+              <div class="d-flex justify-content-between">
+                <span class="h4 font-weight-bold mb-0">Total a pagar</span>
+                <span class="h3 font-weight-bold mb-0">$4860<sup>00</sup></span>
+              </div>
+            </o-block-header>
+            <o-block-footer>
+              <o-button size="lg" [isExpandable]="true"
+                >Pagar en línea</o-button
+              >
+              <hr class="my-4" />
+              <p class="h5">Pagá tu boleta de forma presencial:</p>
+              <small
+                >Descargá tu boleta y acercate a los canales de pago
+                disponibles.
+              </small>
+              <o-button
+                size="lg"
+                type="secondary"
+                [isOutline]="true"
+                [isExpandable]="true"
+                customClasses="mt-3"
+                >Obtener boleta</o-button
+              >
+            </o-block-footer>
+          </o-block>
+        </div>
+      </section>
+    </div>
+  </div>
+</main>
+<o-footer
+  [isPhoneSectionHidden]="true"
+  [isNetworkSectionHidden]="true"
+  [isLinkSectionHideen]="true"
+></o-footer>

@@ -5,6 +5,12 @@ import { CultureComponent } from './modules/templates/culture/culture.component'
 import { ProcedureComponent } from './modules/templates/procedure/procedure.component';
 import { GovermentAreasOptionOneComponent } from './modules/templates/goverment-areas-option-one/goverment-areas-option-one.component';
 import { GovermentAreasOptionTwoComponent } from './modules/templates/goverment-areas-option-two/goverment-areas-option-two.component';
+import { NewsGalleryComponent } from './modules/templates/news-gallery/news-gallery.component';
+import { NewsVideoComponent } from './modules/templates/news-video/news-video.component';
+import { BookComponent } from './modules/templates/book/book.component';
+import { SimpleComponent } from './modules/templates/simple/simple.component';
+import { BillsSummaryComponent } from './modules/templates/bills-summary/bills-summary.component';
+import { PaymentsComponent } from './modules/templates/payments/payments.component';
 
 const routes: Routes = [
   {
@@ -43,6 +49,30 @@ const routes: Routes = [
   {
     path: 'templates/goverment-areas-option-two',
     component: GovermentAreasOptionTwoComponent,
+  },
+  {
+    path: 'templates/news-gallery',
+    component: NewsGalleryComponent,
+  },
+  {
+    path: 'templates/news-video',
+    component: NewsVideoComponent,
+  },
+  {
+    path: 'templates/book',
+    component: BookComponent,
+  },
+  {
+    path: 'templates/simple',
+    component: SimpleComponent,
+  },
+  {
+    path: 'templates/bills-summary',
+    component: BillsSummaryComponent,
+  },
+  {
+    path: 'templates/payments',
+    component: PaymentsComponent,
   },
   { path: '**', pathMatch: 'full', redirectTo: '' },
 ];

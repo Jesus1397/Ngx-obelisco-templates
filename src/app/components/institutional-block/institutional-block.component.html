@@ -6,13 +6,16 @@
       *ngIf="ceo || contact"
     >
       <div class="card card-simple panel-sm-horizontal" *ngIf="ceo">
-        <img
-          src="{{ ceo.image?.src }}"
+        <ng-container *ngIf="ceo.image">
+          <img
+          src="{{ ceo.image.src }}"
           class="rounded-lg"
           width="104"
           height="104"
           alt=""
         />
+        </ng-container>
+        
         <div class="card-body">
           <h4 class="card-title">{{ ceo.title }}</h4>
           <p class="card-text">{{ ceo.description }}</p>
@@ -43,9 +46,9 @@
     </div>
     <div class="row" *ngIf="socialMedia || map">
       <div
-        class="col-12 col-md-6"
+        class="col-12"
         *ngIf="socialMedia"
-        [ngClass]="isSocialMediaHorizontal ? 'col-md-12' : 'col-md-6'"
+        [ngClass]="{'col-md-6': !isSocialMediaHorizontal}"
       >
         <h2 class="mb-4">Seguinos en</h2>
         <div
