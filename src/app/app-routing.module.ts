@@ -10,6 +10,7 @@ import { NewsVideoComponent } from './modules/templates/news-video/news-video.co
 import { BookComponent } from './modules/templates/book/book.component';
 import { SimpleComponent } from './modules/templates/simple/simple.component';
 import { BillsSummaryComponent } from './modules/templates/bills-summary/bills-summary.component';
+import { PaymentsComponent } from './modules/templates/payments/payments.component';
 
 const routes: Routes = [
   {
@@ -68,6 +69,10 @@ const routes: Routes = [
   {
     path: 'templates/bills-summary',
     component: BillsSummaryComponent,
+  },
+  {
+    path: 'templates/payments',
+    component: PaymentsComponent,
   },
   { path: '**', pathMatch: 'full', redirectTo: '' },
 ];
