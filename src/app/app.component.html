@@ -1,12 +1,11 @@
 <o-navbar
   [routes]="routes"
   [searchbarItems]="searchbarItems"
-  [logo]="{
+  [logo]="{route: '/', img:[{
     src: 'https://ngx-obelisco-demo.web.app/assets/favicon.ico',
     width: 40,
     height: 40,
-    customClasses: 'logo-size',
-    route: '/'
-  }"
+    customClasses: 'logo-size'
+  }]}"
 ></o-navbar>
 <router-outlet></router-outlet>
