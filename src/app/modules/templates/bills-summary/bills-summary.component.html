@@ -1,11 +1,17 @@
 <o-navbar
   id="bills_header"
-  [logo]="{
+  [logo]="{route: '/', img:[{
     src: '../../../assets/logo_payments.png',
-    route: '/',
     alt: 'Ciudad de Buenos Aires',
-    height: 48
-  }"
+    height: 48,
+    customClasses: 'd-none d-lg-block'
+  },
+  {
+    src: '../../../assets/logo_payments_mobile.png',
+    alt: 'Ciudad de Buenos Aires',
+    height: 48,
+    customClasses: 'd-lg-none'
+  }]}"
   [routesAccount]="routesAccount"
 ></o-navbar>
 <main>
